@@ -1,17 +1,17 @@
 // script.js
 
 // ==========================================
-// CONFIGURATION - Update these links
+// CONFIGURATION - Links
 // ==========================================
-const WHATSAPP_INVITE_LINK = "https://chat.whatsapp.com/Cp629njgkL4D3mphhM3QG5?mode=gi_t";
-const SPEAKER_REGISTRATION_LINK = "https://tally.so/r/your-speaker-form";
+const WHATSAPP_INVITE_LINK = "https://chat.whatsapp.com/GhOve0pYW6IJCA1s8U97cz?mode=gi_t";
+const SPEAKER_REGISTRATION_LINK = "https://chat.whatsapp.com/Cp629njgkL4D3mphhM3QG5?mode=gi_t";
 
 // Countdown target: July 17, 2026 20:00 WAT (UTC+1)
 const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime(); // 20:00 WAT = 19:00 UTC
 
 // ==========================================
 // CONFIRMED SPEAKERS DATA
-// Real speakers with actual details
+// Images: assets/images/speakers/
 // ==========================================
 const speakers = [
   {
@@ -21,8 +21,8 @@ const speakers = [
     country: "Nigeria 🇳🇬",
     topic: "AI Research & Sustainability",
     expertise: "Co-founder, AI Lead Researcher",
-    linkedin: "#",
-    emoji: "🧑🏾‍🔬"
+    linkedin: "https://www.linkedin.com/in/the-durojaiye?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-durojaiye-yusuf.jpg"
   },
   {
     name: "Epaphras Adelabi",
@@ -31,8 +31,8 @@ const speakers = [
     country: "Nigeria 🇳🇬",
     topic: "Product Design & Business Strategy",
     expertise: "Product Owner, Business Analyst, Brand Consultant, Global Talent",
-    linkedin: "#",
-    emoji: "👨🏾‍🏫"
+    linkedin: "https://www.linkedin.com/in/epaphrasadelabi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-epaphras-adelabi.jpg"
   },
   {
     name: "Ernest Gavor",
@@ -41,8 +41,8 @@ const speakers = [
     country: "Ghana 🇬🇭",
     topic: "Africa Education Innovation",
     expertise: "AI Maturity Consulting, Policy Advisory, Investment Facilitation, Angel Investor, Entrepreneurs Coach",
-    linkedin: "#",
-    emoji: "👨🏾‍💼"
+    linkedin: "https://www.linkedin.com/in/ernestgavor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-ernest-gavor.jpg"
   },
   {
     name: "Shoyombo (Olanrewaju) Moshood",
@@ -51,13 +51,13 @@ const speakers = [
     country: "Nigeria 🇳🇬",
     topic: "Data Science & AI Applications",
     expertise: "Mathematician, Data Scientist, AI Professional, Web App Developer",
-    linkedin: "#",
-    emoji: "👨🏾‍💻"
+    linkedin: "https://www.linkedin.com/in/shoyombo-moshood-582003126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-sholoyombo-moshood.jpg"
   }
 ];
 
 // ==========================================
-// PARTICLE SYSTEM (Soft, elegant animated background)
+// PARTICLE SYSTEM
 // ==========================================
 function initParticles() {
   const canvas = document.getElementById('particleCanvas');
@@ -172,7 +172,7 @@ function updateCountdown() {
 }
 
 // ==========================================
-// RENDER SPEAKERS
+// RENDER SPEAKERS WITH ACTUAL IMAGES
 // ==========================================
 function renderSpeakers() {
   const grid = document.getElementById('speakerGrid');
@@ -180,13 +180,20 @@ function renderSpeakers() {
   
   grid.innerHTML = speakers.map(s => `
     <div class="speaker-card">
-      <div class="speaker-photo">${s.emoji}</div>
+      <div class="speaker-photo">
+        <img 
+          src="${s.image}" 
+          alt="Photo of ${s.name}" 
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'speaker-photo-placeholder\\'>👤</span>';"
+        >
+      </div>
       <h3 class="speaker-name">${s.name}</h3>
       <p class="speaker-role">${s.role}</p>
       <p class="speaker-country">${s.country}</p>
       <span class="speaker-topic">${s.topic}</span>
       <p class="speaker-expertise">${s.expertise}</p>
-      <a href="${s.linkedin}" class="linkedin-link" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="${s.linkedin}" class="linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
     </div>
   `).join('');
 }
@@ -200,7 +207,6 @@ function setupFAQ() {
       const item = btn.closest('.faq-item');
       const isActive = item.classList.contains('active');
       
-      // Close all others
       document.querySelectorAll('.faq-item.active').forEach(el => {
         if (el !== item) el.classList.remove('active');
       });
@@ -211,7 +217,7 @@ function setupFAQ() {
 }
 
 // ==========================================
-// SCROLL REVEAL ANIMATION (softer, slower)
+// SCROLL REVEAL ANIMATION
 // ==========================================
 function setupScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -306,7 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Close mobile menu if open
         const nav = document.querySelector('.nav-links');
         const menuBtn = document.querySelector('.mobile-menu-btn');
         if (nav && nav.style.display === 'flex') {
