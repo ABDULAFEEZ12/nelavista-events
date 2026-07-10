@@ -42,7 +42,6 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Canvas & Backgrounds - softer, more subtle */
 #particleCanvas {
   position: fixed;
   top: 0; left: 0;
@@ -68,7 +67,7 @@ body {
   background-size: 60px 60px;
 }
 
-/* Navbar - softer glass */
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -139,7 +138,7 @@ body {
   transition: all 0.3s;
 }
 
-/* Hero - softer gradients */
+/* Hero */
 .hero {
   padding: 4rem 0 5rem;
   text-align: center;
@@ -221,7 +220,7 @@ body {
   margin-bottom: 3rem;
 }
 
-/* Buttons - softer shadows */
+/* Buttons */
 .btn {
   padding: 0.85rem 2rem;
   border-radius: 3rem;
@@ -264,7 +263,7 @@ body {
 }
 .btn-primary:hover .btn-arrow { transform: translateX(4px); }
 
-/* Stats - softer glass */
+/* Stats */
 .hero-stats {
   display: flex;
   gap: 2rem;
@@ -302,7 +301,7 @@ body {
   background: rgba(255,255,255,0.08); 
 }
 
-/* Countdown - softer */
+/* Countdown */
 .countdown-card {
   display: flex;
   gap: 0.5rem;
@@ -366,7 +365,7 @@ body {
   text-underline-offset: 3px;
 }
 
-/* About - softer cards */
+/* About */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -398,7 +397,7 @@ body {
   line-height: 1.6;
 }
 
-/* Attend Cards - softer */
+/* Attend Cards */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -430,7 +429,7 @@ body {
   line-height: 1.55;
 }
 
-/* Timeline - softer interactive */
+/* Timeline */
 .timeline {
   max-width: 780px;
   margin: 3rem auto 0;
@@ -517,7 +516,7 @@ body {
   font-weight: 500;
 }
 
-/* Speakers - softer cards with more detail */
+/* Speakers */
 .speaker-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -541,15 +540,26 @@ body {
   box-shadow: 0 10px 35px rgba(0,0,0,0.3);
 }
 .speaker-photo {
-  width: 80px; height: 80px;
+  width: 90px; 
+  height: 90px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #1e1e3a, #2a2a50);
   margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: linear-gradient(135deg, #1a1a35, #252545);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.speaker-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.speaker-photo-placeholder {
   font-size: 2rem;
-  border: 2px solid rgba(255,255,255,0.06);
+  color: var(--text-muted);
 }
 .speaker-name { 
   font-weight: 700; 
@@ -601,7 +611,7 @@ body {
   text-decoration: underline;
 }
 
-/* Speaker Apply - softer */
+/* Speaker Apply */
 .apply-flow {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -644,7 +654,7 @@ body {
 }
 .apply-cta { text-align: center; margin-top: 1.5rem; }
 
-/* Gallery - softer */
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -670,7 +680,7 @@ body {
   color: var(--text-secondary);
 }
 
-/* Testimonials - softer */
+/* Testimonials */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -707,7 +717,7 @@ body {
 .testimonial-author strong { display: block; font-size: 0.88rem; font-weight: 600; }
 .testimonial-author span { color: var(--text-muted); font-size: 0.78rem; }
 
-/* FAQ - softer */
+/* FAQ */
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -777,7 +787,7 @@ body {
 }
 .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-/* Footer - softer */
+/* Footer */
 .footer {
   background: rgba(8, 8, 20, 0.7);
   border-top: 1px solid rgba(255,255,255,0.05);
