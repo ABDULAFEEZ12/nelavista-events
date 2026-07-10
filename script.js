@@ -3,7 +3,7 @@
 // ==========================================
 // CONFIGURATION - Update these links
 // ==========================================
-const WHATSAPP_INVITE_LINK = "https://chat.whatsapp.com/your-invite-link";
+const WHATSAPP_INVITE_LINK = "https://chat.whatsapp.com/Cp629njgkL4D3mphhM3QG5?mode=gi_t";
 const SPEAKER_REGISTRATION_LINK = "https://tally.so/r/your-speaker-form";
 
 // Countdown target: July 17, 2026 20:00 WAT (UTC+1)
@@ -11,85 +11,53 @@ const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime(); // 20:00 WA
 
 // ==========================================
 // CONFIRMED SPEAKERS DATA
-// Replace with real speaker info as they confirm
+// Real speakers with actual details
 // ==========================================
 const speakers = [
   {
-    name: "Dr. Amina Diallo",
-    role: "AI Research Scientist",
-    company: "Google DeepMind",
-    country: "Senegal 🇸🇳",
-    topic: "The Future of AI in Africa",
-    linkedin: "#",
-    emoji: "👩🏾‍🔬"
-  },
-  {
-    name: "David Okafor",
-    role: "Senior Software Engineer",
-    company: "Stripe",
+    name: "Durojaiye Yusuf O.",
+    role: "ESG | hPBP-AI Lead Researcher",
+    company: "TENANCY AI",
     country: "Nigeria 🇳🇬",
-    topic: "Building Global Products",
-    linkedin: "#",
-    emoji: "👨🏾‍💻"
-  },
-  {
-    name: "Lina Mwangi",
-    role: "Product Design Lead",
-    company: "Linear",
-    country: "Kenya 🇰🇪",
-    topic: "Designing for Scale",
-    linkedin: "#",
-    emoji: "👩🏻‍🎨"
-  },
-  {
-    name: "Kwame Asare",
-    role: "Cloud Solutions Architect",
-    company: "Microsoft",
-    country: "Ghana 🇬🇭",
-    topic: "Cloud Computing 101",
-    linkedin: "#",
-    emoji: "👨🏾‍💼"
-  },
-  {
-    name: "Zuri Abebe",
-    role: "Founder & CEO",
-    company: "AfriTech Ventures",
-    country: "Ethiopia 🇪🇹",
-    topic: "From Idea to Startup",
-    linkedin: "#",
-    emoji: "👩🏾‍🚀"
-  },
-  {
-    name: "Omar Benali",
-    role: "Data Engineering Manager",
-    company: "Vercel",
-    country: "Morocco 🇲🇦",
-    topic: "Data Careers in 2026",
+    topic: "AI Research & Sustainability",
+    expertise: "Co-founder, AI Lead Researcher",
     linkedin: "#",
     emoji: "🧑🏾‍🔬"
   },
   {
-    name: "Chioma Eze",
-    role: "Developer Advocate",
-    company: "GitHub",
+    name: "Epaphras Adelabi",
+    role: "Entrepreneur | Lecturer in Business",
+    company: "SaaS & EdTech Ventures",
     country: "Nigeria 🇳🇬",
-    topic: "Open Source & Community",
+    topic: "Product Design & Business Strategy",
+    expertise: "Product Owner, Business Analyst, Brand Consultant, Global Talent",
     linkedin: "#",
-    emoji: "👩🏾‍💻"
+    emoji: "👨🏾‍🏫"
   },
   {
-    name: "Tendai Mutasa",
-    role: "UX Researcher",
-    company: "Spotify",
-    country: "Zimbabwe 🇿🇼",
-    topic: "User Research Fundamentals",
+    name: "Ernest Gavor",
+    role: "Edtech Ecosystem Strategist",
+    company: "AEE & Africa Pavilion @ Bett",
+    country: "Ghana 🇬🇭",
+    topic: "Africa Education Innovation",
+    expertise: "AI Maturity Consulting, Policy Advisory, Investment Facilitation, Angel Investor, Entrepreneurs Coach",
     linkedin: "#",
-    emoji: "👩🏾‍🔍"
+    emoji: "👨🏾‍💼"
+  },
+  {
+    name: "Shoyombo (Olanrewaju) Moshood",
+    role: "Mastercard Foundation Scholar",
+    company: "Data Science & AI Professional",
+    country: "Nigeria 🇳🇬",
+    topic: "Data Science & AI Applications",
+    expertise: "Mathematician, Data Scientist, AI Professional, Web App Developer",
+    linkedin: "#",
+    emoji: "👨🏾‍💻"
   }
 ];
 
 // ==========================================
-// PARTICLE SYSTEM (Premium animated background)
+// PARTICLE SYSTEM (Soft, elegant animated background)
 // ==========================================
 function initParticles() {
   const canvas = document.getElementById('particleCanvas');
@@ -98,7 +66,7 @@ function initParticles() {
   
   let width, height;
   const particles = [];
-  const PARTICLE_COUNT = 70;
+  const PARTICLE_COUNT = 60;
   
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -114,10 +82,10 @@ function initParticles() {
     reset() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.size = Math.random() * 2 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.4;
-      this.speedY = (Math.random() - 0.5) * 0.4;
-      this.opacity = Math.random() * 0.5 + 0.1;
+      this.size = Math.random() * 1.8 + 0.4;
+      this.speedX = (Math.random() - 0.5) * 0.3;
+      this.speedY = (Math.random() - 0.5) * 0.3;
+      this.opacity = Math.random() * 0.4 + 0.08;
     }
     update() {
       this.x += this.speedX;
@@ -129,7 +97,7 @@ function initParticles() {
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(139, 160, 255, ${this.opacity})`;
+      ctx.fillStyle = `rgba(150, 170, 255, ${this.opacity})`;
       ctx.fill();
     }
   }
@@ -138,7 +106,6 @@ function initParticles() {
     particles.push(new Particle());
   }
   
-  // Connect nearby particles with lines
   function drawLines() {
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -149,8 +116,8 @@ function initParticles() {
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(100, 130, 255, ${0.06 * (1 - dist / 100)})`;
-          ctx.lineWidth = 0.5;
+          ctx.strokeStyle = `rgba(130, 155, 255, ${0.04 * (1 - dist / 100)})`;
+          ctx.lineWidth = 0.4;
           ctx.stroke();
         }
       }
@@ -215,9 +182,10 @@ function renderSpeakers() {
     <div class="speaker-card">
       <div class="speaker-photo">${s.emoji}</div>
       <h3 class="speaker-name">${s.name}</h3>
-      <p class="speaker-role">${s.role} at ${s.company}</p>
+      <p class="speaker-role">${s.role}</p>
       <p class="speaker-country">${s.country}</p>
       <span class="speaker-topic">${s.topic}</span>
+      <p class="speaker-expertise">${s.expertise}</p>
       <a href="${s.linkedin}" class="linkedin-link" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
   `).join('');
@@ -243,7 +211,7 @@ function setupFAQ() {
 }
 
 // ==========================================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL ANIMATION (softer, slower)
 // ==========================================
 function setupScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -253,12 +221,12 @@ function setupScrollReveal() {
         entry.target.style.transform = 'translateY(0)';
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   
   document.querySelectorAll('.about-card, .attend-card, .timeline-card, .speaker-card, .apply-step, .gallery-item, .testimonial-card, .faq-item').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(el);
   });
 }
@@ -280,10 +248,12 @@ function setupMobileMenu() {
     nav.style.top = '100%';
     nav.style.left = '0';
     nav.style.right = '0';
-    nav.style.background = 'rgba(5,5,16,0.95)';
+    nav.style.background = 'rgba(8, 8, 22, 0.96)';
     nav.style.backdropFilter = 'blur(20px)';
     nav.style.padding = '1.5rem';
-    nav.style.borderBottom = '1px solid var(--border)';
+    nav.style.borderBottom = '1px solid rgba(255,255,255,0.06)';
+    nav.style.borderRadius = '0 0 1.5rem 1.5rem';
+    nav.style.zIndex = '99';
   });
 }
 
@@ -338,9 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         // Close mobile menu if open
         const nav = document.querySelector('.nav-links');
+        const menuBtn = document.querySelector('.mobile-menu-btn');
         if (nav && nav.style.display === 'flex') {
           nav.style.display = 'none';
-          document.querySelector('.mobile-menu-btn')?.setAttribute('aria-expanded', 'false');
+          if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
         }
       }
     });
