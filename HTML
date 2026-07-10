@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Nelavista Summer Tech Bootcamp 2026 – Africa's next generation of builders starts here. Free 7-day virtual bootcamp in AI, dev, design & startups. July 17–23.">
+  <meta name="theme-color" content="#050510">
+  
+  <title>Nelavista Summer Tech Bootcamp 2026 | Africa's Builders</title>
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nelavista Summer Tech Bootcamp 2026">
+  <meta property="og:description" content="200+ students registered. 7 days. Virtual. Free. Join Africa's most ambitious tech bootcamp.">
+  <meta property="og:image" content="https://placehold.co/1200x630/0a0a1a/ffffff?text=Nelavista+2026">
+  <meta property="og:url" content="https://nelavista.dev">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nelavista Summer Tech Bootcamp 2026">
+  <meta name="twitter:description" content="Free virtual bootcamp. 200+ students. 10+ speakers. AI, Design, Cloud, Startups.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0a0a1a/ffffff?text=Nelavista+2026">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Nelavista Summer Tech Bootcamp 2026",
+      "startDate": "2026-07-17T20:00:00+01:00",
+      "endDate": "2026-07-23T22:00:00+01:00",
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+      "location": { "@type": "VirtualLocation", "url": "https://nelavista.dev" },
+      "description": "Free 7-day virtual technology bootcamp for African university students. AI, Software Dev, Product Design, Cloud, Entrepreneurship.",
+      "organizer": { "@type": "Organization", "name": "Nelavista", "url": "https://nelavista.dev" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="bg-gradient-1" aria-hidden="true"></div>
+  <div class="bg-gradient-2" aria-hidden="true"></div>
+  <div class="bg-gradient-3" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#" class="logo" aria-label="Nelavista home">
+        <span class="logo-icon">✦</span> Nelavista
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#speaker-apply" class="nav-cta">Speak</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="live-dot"></span> 200+ students already registered
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-brand">NELAVISTA</span>
+          <span class="hero-event">SUMMER TECH BOOTCAMP 2026</span>
+        </h1>
+        <p class="hero-tagline">Africa's next generation of builders starts here.</p>
+        <div class="hero-meta">
+          <span>📅 17–23 July 2026</span>
+          <span>🕗 8:00 PM (WAT)</span>
+          <span>🌐 Virtual</span>
+          <span>🆓 Free</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="joinBootcampBtn">
+            <span>Join the Bootcamp</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <button class="btn btn-secondary" id="becomeSpeakerBtn">
+            Become a Speaker
+          </button>
+        </div>
+        
+        <!-- Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Students Joined</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">7</span>
+            <span class="stat-label">Days</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Countries</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Expert Speakers</span>
+          </div>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-card">
+          <div class="countdown-item">
+            <span id="days" class="countdown-number">00</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <span id="hours" class="countdown-number">00</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <span id="minutes" class="countdown-number">00</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <div class="countdown-separator">:</div>
+          <div class="countdown-item">
+            <span id="seconds" class="countdown-number">00</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-label">Why Nelavista</div>
+        <h2 class="section-title">Building Africa's future through technology education</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">🎯</div>
+            <h3>Practical Learning</h3>
+            <p>Learn directly from founders, engineers, and designers building real products globally.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🌍</div>
+            <h3>African Focus</h3>
+            <p>Designed specifically for African university students to launch global tech careers.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🤝</div>
+            <h3>Community First</h3>
+            <p>Join a network of ambitious builders, mentors, and industry professionals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Should Attend -->
+    <section class="section attend">
+      <div class="container">
+        <div class="section-label">Audience</div>
+        <h2 class="section-title">Who should attend</h2>
+        <div class="cards-grid">
+          <div class="attend-card">
+            <div class="card-emoji">🎓</div>
+            <h3>University Students</h3>
+            <p>Undergrad & postgrad students ready to launch tech careers.</p>
+          </div>
+          <div class="attend-card">
+            <div class="card-emoji">🌱</div>
+            <h3>Complete Beginners</h3>
+            <p>Zero experience needed. We'll guide you from day one.</p>
+          </div>
+          <div class="attend-card">
+            <div class="card-emoji">🔄</div>
+            <h3>Career Changers</h3>
+            <p>Professionals transitioning into tech from any background.</p>
+          </div>
+          <div class="attend-card">
+            <div class="card-emoji">🚀</div>
+            <h3>Future Founders</h3>
+            <p>Students who want to build startups and solve African problems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="section agenda" id="agenda">
+      <div class="container">
+        <div class="section-label">Programme</div>
+        <h2 class="section-title">7-Day Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-day="1">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 1</span>
+                <span class="day-date">July 17</span>
+              </div>
+              <h3>Opening Ceremony</h3>
+              <p>The Future of AI & Technology in Africa. Keynote speeches and vision setting.</p>
+              <div class="timeline-tags">
+                <span>Keynote</span><span>AI</span><span>Vision</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="2">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 2</span>
+                <span class="day-date">July 18</span>
+              </div>
+              <h3>Software Development</h3>
+              <p>Modern web & mobile development. Live coding, tools, and best practices.</p>
+              <div class="timeline-tags">
+                <span>Web</span><span>Mobile</span><span>Git</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="3">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 3</span>
+                <span class="day-date">July 19</span>
+              </div>
+              <h3>Product Design (UI/UX)</h3>
+              <p>Design thinking, Figma workshops, and creating delightful user experiences.</p>
+              <div class="timeline-tags">
+                <span>Figma</span><span>UX</span><span>Design</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="4">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 4</span>
+                <span class="day-date">July 20</span>
+              </div>
+              <h3>Data, Cloud & AI</h3>
+              <p>Cloud computing, data engineering, and building intelligent systems.</p>
+              <div class="timeline-tags">
+                <span>AWS</span><span>Data</span><span>ML</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="5">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 5</span>
+                <span class="day-date">July 21</span>
+              </div>
+              <h3>Entrepreneurship & Startups</h3>
+              <p>Ideation, MVP building, fundraising, and founder stories from across Africa.</p>
+              <div class="timeline-tags">
+                <span>Startups</span><span>Funding</span><span>MVP</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="6">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 6</span>
+                <span class="day-date">July 22</span>
+              </div>
+              <h3>Career Growth & Remote Jobs</h3>
+              <p>LinkedIn optimization, remote work strategies, and landing global opportunities.</p>
+              <div class="timeline-tags">
+                <span>LinkedIn</span><span>Remote</span><span>CV</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item" data-day="7">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="day-header">
+                <span class="day-number">Day 7</span>
+                <span class="day-date">July 23</span>
+              </div>
+              <h3>Closing Ceremony</h3>
+              <p>Networking, community launch, certificates, and next steps for your career.</p>
+              <div class="timeline-tags">
+                <span>Network</span><span>Community</span><span>Next Steps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confirmed Speakers -->
+    <section class="section speakers" id="speakers">
+      <div class="container">
+        <div class="section-label">Confirmed Speakers</div>
+        <h2 class="section-title">Learn from industry leaders</h2>
+        <p class="section-subtitle">More speakers announced weekly. Want to speak? <a href="#speaker-apply">Apply here</a>.</p>
+        <div class="speaker-grid" id="speakerGrid"></div>
+      </div>
+    </section>
+
+    <!-- Speaker Application Section -->
+    <section class="section speaker-apply" id="speaker-apply">
+      <div class="container">
+        <div class="section-label">Share Your Knowledge</div>
+        <h2 class="section-title">Become a Speaker</h2>
+        <div class="apply-flow">
+          <div class="apply-step">
+            <div class="step-number">1</div>
+            <h3>Why Speak?</h3>
+            <p>Inspire 200+ ambitious African students. Build your global brand. Connect with fellow experts.</p>
+          </div>
+          <div class="apply-step">
+            <div class="step-number">2</div>
+            <h3>Requirements</h3>
+            <p>Industry experience in tech. Willingness to teach. 60–90 min virtual session.</p>
+          </div>
+          <div class="apply-step">
+            <div class="step-number">3</div>
+            <h3>Expected Audience</h3>
+            <p>University students, beginners, career changers across 6+ African countries.</p>
+          </div>
+          <div class="apply-step">
+            <div class="step-number">4</div>
+            <h3>Apply Now</h3>
+            <p>Click below to fill out our speaker form. We review applications weekly.</p>
+          </div>
+        </div>
+        <div class="apply-cta">
+          <button class="btn btn-primary btn-large" id="becomeSpeakerSecondary">
+            Apply to Speak <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-label">Media</div>
+        <h2 class="section-title">Bootcamp Graphics</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <div class="gallery-placeholder">📣 Countdown Poster</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-placeholder">🎤 Speaker Announcement</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-placeholder">📅 Schedule Graphic</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-placeholder">🏆 Certificate Preview</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Placeholder -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What participants say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Testimonials from students and speakers will appear here after the bootcamp. This builds incredible social proof."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👤</div>
+              <div>
+                <strong>Coming Soon</strong>
+                <span>Bootcamp 2026 Participant</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Speaker testimonials will showcase the impact and professionalism of Nelavista events."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👤</div>
+              <div>
+                <strong>Coming Soon</strong>
+                <span>Guest Speaker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-label">Questions</div>
+        <h2 class="section-title">Frequently Asked</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is it really free?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Yes, 100% free. No hidden costs.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Will I get a certificate?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Yes, all participants who attend 5+ days receive a digital certificate.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need a laptop?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>A laptop is recommended but you can follow along on a tablet or phone.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can secondary school students join?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Absolutely! Anyone curious about tech is welcome.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there a WhatsApp community?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Yes! Join via the button at the bottom of this page.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are sessions recorded?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Yes, recordings are shared with registered participants.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I become a speaker?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Scroll to the "Become a Speaker" section and apply via our form.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where is it held?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><p>Fully virtual. Join from anywhere with internet.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section cta-final">
+      <div class="container">
+        <h2>Ready to build your future?</h2>
+        <p>Join 200+ students from 6+ countries. Free. Virtual. July 17–23.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary btn-large" id="joinWhatsAppBtn">
+            Join WhatsApp Community <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">✦ Nelavista</span>
+          <p>Building Africa's future through technology education.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter / X</a>
+          <a href="mailto:hello@nelavista.dev">Email</a>
+        </div>
+        <div class="footer-links">
+          <h4>Participate</h4>
+          <a href="#speaker-apply">Become a Speaker</a>
+          <a href="#" id="footerJoinBtn">Join Bootcamp</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nelavista. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
