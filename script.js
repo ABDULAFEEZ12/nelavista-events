@@ -13,14 +13,43 @@ const SPEAKER_PREWRITTEN_MESSAGE = encodeURIComponent(
 const SPEAKER_REGISTRATION_LINK = `https://wa.me/${SPEAKER_WHATSAPP_NUMBER.replace(/\+/g, '')}?text=${SPEAKER_PREWRITTEN_MESSAGE}`;
 
 // Countdown target: July 17, 2026 20:00 WAT (UTC+1)
-const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime(); // 20:00 WAT = 19:00 UTC
+const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime();
 
 // ==========================================
 // CONFIRMED SPEAKERS DATA
 // Images: assets/images/speakers/
-// Add new speakers here by copying the template below
 // ==========================================
 const speakers = [
+  {
+    name: "Ernest Gavor",
+    role: "Edtech Ecosystem Strategist",
+    company: "AEE & Africa Pavilion @ Bett",
+    country: "Ghana 🇬🇭",
+    topic: "Africa Education Innovation",
+    expertise: "AI Maturity Consulting, Policy Advisory, Investment Facilitation, Angel Investor, Entrepreneurs Coach",
+    linkedin: "https://www.linkedin.com/in/ernestgavor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-ernest-gavor.jpg"
+  },
+  {
+    name: "Vivek Gupta",
+    role: "Founder | AI Learning Ecosystem Builder",
+    company: "India's 1st Immersive AI Learning Platform",
+    country: "India 🇮🇳",
+    topic: "Building Immersive AI Learning Ecosystems",
+    expertise: "Open for Strategic Investment & Partnerships",
+    linkedin: "https://www.linkedin.com/in/thevivekguptavg?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-vivek-gupta.jpg"
+  },
+  {
+    name: "Victor Ani-laju",
+    role: "Founder, ePay | Author, HELP",
+    company: "Victor University",
+    country: "Nigeria 🇳🇬",
+    topic: "Entrepreneurship & Building from Scratch",
+    expertise: "President, Victor University | Author | Fintech Founder",
+    linkedin: "https://www.linkedin.com/in/victoranilaju?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-victor-anilaju.jpg"
+  },
   {
     name: "Durojaiye Yusuf O.",
     role: "ESG | hPBP-AI Lead Researcher",
@@ -42,16 +71,6 @@ const speakers = [
     image: "assets/images/speakers/speaker-epaphras-adelabi.jpg"
   },
   {
-    name: "Ernest Gavor",
-    role: "Edtech Ecosystem Strategist",
-    company: "AEE & Africa Pavilion @ Bett",
-    country: "Ghana 🇬🇭",
-    topic: "Africa Education Innovation",
-    expertise: "AI Maturity Consulting, Policy Advisory, Investment Facilitation, Angel Investor, Entrepreneurs Coach",
-    linkedin: "https://www.linkedin.com/in/ernestgavor?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    image: "assets/images/speakers/speaker-ernest-gavor.jpg"
-  },
-  {
     name: "Shoyombo (Olanrewaju) Moshood",
     role: "Mastercard Foundation Scholar",
     company: "Data Science & AI Professional",
@@ -62,24 +81,37 @@ const speakers = [
     image: "assets/images/speakers/speaker-sholoyombo-moshood.jpg"
   },
   {
-    name: "Vivek Gupta",
-    role: "Founder | AI Learning Ecosystem Builder",
-    company: "India's 1st Immersive AI Learning Platform",
-    country: "India 🇮🇳",
-    topic: "Building Immersive AI Learning Ecosystems",
-    expertise: "Open for Strategic Investment & Partnerships",
-    linkedin: "https://www.linkedin.com/in/thevivekguptavg?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    image: "assets/images/speakers/speaker-vivek-gupta.jpg"
+    name: "Sultanat (Erinlola) Bashir",
+    role: "Frontend Developer | Founder of HerDeen",
+    company: "Girls Tech Unilorin",
+    country: "Nigeria 🇳🇬",
+    topic: "Building for Social Impact with React & Next.js",
+    expertise: "Chapter Lead Girls Tech Unilorin | Social Impact Builder",
+    linkedin: "#",
+    image: "assets/images/speakers/speaker-sultanat-bashir.jpg"
+  }
+];
+
+// ==========================================
+// HOSTS DATA
+// Images: assets/images/hosts/
+// ==========================================
+const hosts = [
+  {
+    name: "Abdul Afeez (Adewale) Tella",
+    role: "Founder at Nelavista",
+    bio: "Building a student education platform for Nigerian universities.",
+    badge: "Host",
+    linkedin: "#",
+    image: "assets/images/hosts/host-abdul-afeez-tella.jpg"
   },
   {
-    name: "Victor Ani-laju",
-    role: "Founder, ePay | Author, HELP",
-    company: "Victor University",
-    country: "Nigeria 🇳🇬",
-    topic: "Entrepreneurship & Building from Scratch",
-    expertise: "President, Victor University | Author | Fintech Founder",
-    linkedin: "https://www.linkedin.com/in/victoranilaju?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    image: "assets/images/speakers/speaker-victor-anilaju.jpg"
+    name: "Onovwiome (Tobiloba) Honourable Onome",
+    role: "AI Generalist & Creativity Coach",
+    bio: "Social Media Manager | AI Consultant | Student Leader | Advocate",
+    badge: "Co-Host",
+    linkedin: "#",
+    image: "assets/images/hosts/host-onovwiome-tobiloba.jpg"
   }
 ];
 
@@ -199,7 +231,7 @@ function updateCountdown() {
 }
 
 // ==========================================
-// RENDER SPEAKERS WITH ACTUAL IMAGES
+// RENDER SPEAKERS
 // ==========================================
 function renderSpeakers() {
   const grid = document.getElementById('speakerGrid');
@@ -221,6 +253,32 @@ function renderSpeakers() {
       <span class="speaker-topic">${s.topic}</span>
       <p class="speaker-expertise">${s.expertise}</p>
       <a href="${s.linkedin}" class="linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  `).join('');
+}
+
+// ==========================================
+// RENDER HOSTS
+// ==========================================
+function renderHosts() {
+  const grid = document.getElementById('hostGrid');
+  if (!grid) return;
+  
+  grid.innerHTML = hosts.map(h => `
+    <div class="host-card">
+      <span class="host-badge">${h.badge}</span>
+      <div class="host-photo">
+        <img 
+          src="${h.image}" 
+          alt="Photo of ${h.name}" 
+          loading="lazy"
+          onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\\'host-photo-placeholder\\'>👑</span>';"
+        >
+      </div>
+      <h3 class="host-name">${h.name}</h3>
+      <p class="host-role">${h.role}</p>
+      <p class="host-bio">${h.bio}</p>
+      <a href="${h.linkedin}" class="host-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
     </div>
   `).join('');
 }
@@ -256,7 +314,7 @@ function setupScrollReveal() {
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   
-  document.querySelectorAll('.about-card, .attend-card, .timeline-card, .speaker-card, .apply-step, .gallery-item, .testimonial-card, .faq-item').forEach(el => {
+  document.querySelectorAll('.about-card, .attend-card, .timeline-card, .speaker-card, .host-card, .apply-step, .gallery-item, .testimonial-card, .faq-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
@@ -322,6 +380,7 @@ function setupButtons() {
 document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   renderSpeakers();
+  renderHosts();
   setupFAQ();
   setupScrollReveal();
   setupMobileMenu();
