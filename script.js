@@ -12,6 +12,7 @@ const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime(); // 20:00 WA
 // ==========================================
 // CONFIRMED SPEAKERS DATA
 // Images: assets/images/speakers/
+// Add new speakers here by copying the template below
 // ==========================================
 const speakers = [
   {
@@ -53,6 +54,26 @@ const speakers = [
     expertise: "Mathematician, Data Scientist, AI Professional, Web App Developer",
     linkedin: "https://www.linkedin.com/in/shoyombo-moshood-582003126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     image: "assets/images/speakers/speaker-sholoyombo-moshood.jpg"
+  },
+  {
+    name: "Vivek Gupta",
+    role: "Founder | AI Learning Ecosystem Builder",
+    company: "India's 1st Immersive AI Learning Platform",
+    country: "India 🇮🇳",
+    topic: "Building Immersive AI Learning Ecosystems",
+    expertise: "Open for Strategic Investment & Partnerships",
+    linkedin: "https://www.linkedin.com/in/thevivekguptavg?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-vivek-gupta.jpg"
+  },
+  {
+    name: "Victor Ani-laju",
+    role: "Founder, ePay | Author, HELP",
+    company: "Victor University",
+    country: "Nigeria 🇳🇬",
+    topic: "Entrepreneurship & Building from Scratch",
+    expertise: "President, Victor University | Author | Fintech Founder",
+    linkedin: "https://www.linkedin.com/in/victoranilaju?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    image: "assets/images/speakers/speaker-victor-anilaju.jpg"
   }
 ];
 
