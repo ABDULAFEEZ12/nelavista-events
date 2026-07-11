@@ -87,7 +87,7 @@ const speakers = [
     country: "Nigeria 🇳🇬",
     topic: "Building for Social Impact with React & Next.js",
     expertise: "Chapter Lead Girls Tech Unilorin | Social Impact Builder",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sultanat-bashir-018314328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     image: "assets/images/speakers/speaker-sultanat-bashir.jpg"
   }
 ];
@@ -102,7 +102,7 @@ const hosts = [
     role: "Founder at Nelavista",
     bio: "Building a student education platform for Nigerian universities.",
     badge: "Host",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/abdul-afeez-tella-745aa03aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     image: "assets/images/hosts/host-abdul-afeez-tella.jpg"
   },
   {
@@ -110,7 +110,7 @@ const hosts = [
     role: "AI Generalist & Creativity Coach",
     bio: "Social Media Manager | AI Consultant | Student Leader | Advocate",
     badge: "Host",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/onovwiome-honourable-onome-3a28282b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     image: "assets/images/hosts/host-onovwiome-tobiloba.jpg"
   }
 ];
