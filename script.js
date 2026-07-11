@@ -109,7 +109,7 @@ const hosts = [
     name: "Onovwiome (Tobiloba) Honourable Onome",
     role: "AI Generalist & Creativity Coach",
     bio: "Social Media Manager | AI Consultant | Student Leader | Advocate",
-    badge: "Co-Host",
+    badge: "Host",
     linkedin: "#",
     image: "assets/images/hosts/host-onovwiome-tobiloba.jpg"
   }
