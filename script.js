@@ -64,7 +64,7 @@ const speakers = [
     name: "Epaphras Adelabi",
     role: "Entrepreneur | Lecturer in Business",
     company: "SaaS & EdTech Ventures",
-    country: "Nigeria 🇳🇬",
+    country: "United Kingdom 🇬🇧",
     topic: "Product Design & Business Strategy",
     expertise: "Product Owner, Business Analyst, Brand Consultant, Global Talent",
     linkedin: "https://www.linkedin.com/in/epaphrasadelabi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
