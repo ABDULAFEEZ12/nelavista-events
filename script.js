@@ -4,7 +4,13 @@
 // CONFIGURATION - Links
 // ==========================================
 const WHATSAPP_INVITE_LINK = "https://chat.whatsapp.com/GhOve0pYW6IJCA1s8U97cz?mode=gi_t";
-const SPEAKER_REGISTRATION_LINK = "https://chat.whatsapp.com/Cp629njgkL4D3mphhM3QG5?mode=gi_t";
+
+// Speaker application: direct message to your personal WhatsApp
+const SPEAKER_WHATSAPP_NUMBER = "+2347087896654";
+const SPEAKER_PREWRITTEN_MESSAGE = encodeURIComponent(
+  "Hello! I would love to speak at Nelavista Summer Tech Bootcamp 2026. I'd like to learn more about the opportunity."
+);
+const SPEAKER_REGISTRATION_LINK = `https://wa.me/${SPEAKER_WHATSAPP_NUMBER.replace(/\+/g, '')}?text=${SPEAKER_PREWRITTEN_MESSAGE}`;
 
 // Countdown target: July 17, 2026 20:00 WAT (UTC+1)
 const COUNTDOWN_TARGET = new Date("2026-07-17T19:00:00Z").getTime(); // 20:00 WAT = 19:00 UTC
